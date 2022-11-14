@@ -10,6 +10,8 @@ class HomePage extends StatelessWidget {
         children: [
           const SizedBox(height: 16),
           header(),
+          const SizedBox(height: 30),
+          title(),
         ],
       ),
     );
@@ -36,6 +38,26 @@ class HomePage extends StatelessWidget {
           Text('HOME'),
           Spacer(),
           const Icon(Icons.search),
+        ],
+      ),
+    );
+  }
+
+  Widget title() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            'Discover The Most',
+            style: TextStyle(
+              color: Colors.black,
+            ),
+          ),
+          Text(
+            'Modern Furniture',
+          ),
         ],
       ),
     );
