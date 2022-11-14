@@ -35,7 +35,10 @@ class HomePage extends StatelessWidget {
             ),
           ),
           Spacer(),
-          Text('HOME'),
+          Text(
+            'HOME',
+            style: TextStyle(fontWeight: FontWeight.bold),
+          ),
           Spacer(),
           const Icon(Icons.search),
         ],
@@ -52,14 +55,44 @@ class HomePage extends StatelessWidget {
           Text(
             'Discover The Most',
             style: TextStyle(
-              color: Colors.black,
-            ),
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 28),
           ),
           Text(
             'Modern Furniture',
+            style: TextStyle(
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 28),
           ),
         ],
       ),
     );
   }
+}
+
+Widget header() {
+  return Padding(
+    padding: const EdgeInsets.symmetric(horizontal: 16),
+    child: Row(
+      children: [
+        Material(
+          color: Colors.grey[200],
+          borderRadius: BorderRadius.circular(8),
+          child: InkWell(
+            onTap: () {},
+            borderRadius: BorderRadius.circular(8),
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Icon(Icons.menu, color: Colors.black),
+            ),
+          ),
+        ),
+        Spacer(),
+        Text(
+          'HOME',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        Spacer(),
+        const Icon(Icons.search),
+      ],
+    ),
+  );
 }
